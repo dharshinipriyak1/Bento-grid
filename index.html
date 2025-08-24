@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Bento grid</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .outerbox {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(250px, 1fr));
+      grid-template-rows: repeat(4, 250px);
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      display: grid;
+      justify-content: center;
+      box-shadow: hsl(31, 66%, 93%)
+    }
+
+    h1,
+    p {
+      margin: 10px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .highlight {
+      color: #6b4eff;
+      font-weight: bold;
+    }
+
+    .box:first-child {
+      background-color: rgb(240, 229, 200);
+    }
+
+    .box:nth-child(2) {
+      grid-column: span 2;
+      font-size: 15px;
+      background-color: #6b4eff;
+      color: white;
+    }
+
+    .box:nth-child(3) {
+      grid-row: span 2;
+      font-size: 15px;
+    }
+
+    .box:nth-child(4) {
+      grid-row: span 2;
+      font-size: 15px;
+      background-color: hsl(39, 100%, 71%);
+    }
+
+    .box:last-child {
+      grid-column: span 2;
+      font-size: 15px;
+      background-color: hsl(256, 67%, 59%);
+      color: white;
+    }
+
+    .box:last-child img {
+      width: 100%;
+      max-height: 75%;
+      height: auto;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    /* Responsive text size */
+    /* Tablet view */
+    @media screen and (max-width: 1024px) {
+      .outerbox {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile view */
+    @media screen and (max-width: 600px) {
+      .outerbox {
+        grid-template-columns: 1fr;
+      }
+
+      .box {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="outerbox">
+    <div class="box">
+      <h1>Create and schedule content <span class="highlight">quicker.</span></h1>
+      <img src="./assets/images/illustration-create-post.webp" alt="Create Post">
+    </div>
+
+    <div class="box">
+      <h1>Social Media <span class="highlight-yellow">10x Faster</span> with AI</h1>
+      <img src="./assets/images/illustration-five-stars.webp" alt="Five Stars">
+      <p>Over 4,000 5-star reviews</p>
+    </div>
+
+    <div class="box">
+      <h1>Schedule to social media.</h1>
+      <img src="./assets/images/illustration-schedule-posts.webp" alt="Schedule Posts">
+      <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+    </div>
+
+    <div class="box">
+      <h1>Write your content using AI.</h1>
+      <img src="./assets/images/illustration-ai-content.webp" alt="AI Content" width="160%">
+    </div>
+
+    <div class="box">
+      <img src="./assets/images/illustration-multiple-platforms.webp" alt="Multiple Platforms">
+      <h1>Manage multiple accounts and platforms.</h1>
+    </div>
+
+    <div class="box">
+      <h1>Maintain a consistent posting schedule.</h1>
+      <img src="./assets/images/illustration-consistent-schedule.webp" alt="Consistent Schedule">
+    </div>
+
+    <div class="box">
+      <h1>>56%</h1>
+      <p>Faster audience growth</p>
+      <img src="./assets/images/illustration-audience-growth.webp" alt="Audience Growth">
+    </div>
+
+    <div class="box">
+      <img src="./assets/images/illustration-grow-followers.webp" alt="Grow Followers">
+      <p>Grow followers with non-stop content.</p>
+    </div>
+
+  </div>
+
+  <div class="attribution" style="text-align:center; padding: 10px; font-size: 11px;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Priya</a>.
+  </div>
+
+</body>
+
+</html>
